@@ -40,11 +40,11 @@ The solution is simple if you remember that in Python, functions can return clas
 
 from django.forms import ModelForm
 
-def get_model_form(dynamic_model):
+def get_model_form(dynamic_model, form_fields='__all__'):
     class MyDynamicModelForm(ModelForm):
         class Meta:
             model = dynamic_model
-            fields = '__all__'
+            fields = form_fields
 
     return MyDynamicModelForm
 {% endhighlight %}
@@ -69,7 +69,7 @@ class MyDynamicModelView(FormView):
         # Assuming you're passing `app_label` and `model_name` via URL
         app_label = kwargs['app_label']
         model_name = kwargs['model_name']
-        self.model = apps.get_model(app_label=app_label, model_name=model_name)
+        self.model = apps.get_model(app_label, model_name)
         return super().dispatch(request, *args, **kwargs)
 
     def get_form_class(self):
