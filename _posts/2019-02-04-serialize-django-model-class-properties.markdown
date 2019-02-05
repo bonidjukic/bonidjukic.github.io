@@ -12,7 +12,7 @@ Using [Django's serialization framework] to serialize data into the most popular
 
 ## Concrete scenario
 
-I'm often using [select2] `jQuery` component in my Django projects when I want a powerful yet simple autocomplete select widgets. If I just need to render a mostly static list of options for the select autocomplete, most of the time I find it easiest to just pass a `json` encoded `QuerySet` and initialize the `select2` component with the passed `json` object.
+I'm often using [select2] `jQuery` component in my Django projects when I want a powerful yet simple autocomplete select widgets. If I just need to render a mostly static list of options for the select autocomplete, most of the time I find it easiest to simply pass a `json` encoded `QuerySet` and initialize the `select2` component with the passed `json` object.
 
 ## Problem
 
@@ -120,7 +120,7 @@ data = json_serialize(MyModel.objects.all(), fields=('name', 'description'),
                       props=('display_name',))
 {% endhighlight %}
 
-Or, not passing fields as all:
+Or, not passing fields at all:
 
 {% highlight python %}
 # serializers.py
