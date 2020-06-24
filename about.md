@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 
-I'm a self-taught, full stack web dev with 7+ years of experience, holding a master's degree in physics education, previously co-founded a small development agency of 7 people (working as a remote tech team for a US-based startup) and done a lot of freelancing and contracting.
+I'm a self-taught, full stack web dev with 9+ years of experience, holding a master's degree in physics education, previously co-founded a small development agency of 7 people (working as a remote tech team for a US-based startup) and done a lot of freelancing and contracting.
 
 I'm very passionate about software development, computers and technology in general. I like to write code, solve problems and have fun along the way.
 
